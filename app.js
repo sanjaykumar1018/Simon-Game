@@ -50,7 +50,7 @@ function checkans(idx){
         if(level <= 3){
             h3.innerHTML=`Game Over! Level was <b>${level}</b> <br>Wow, at least you didn’t get a negative score… I think.<br><br>Press Start to Restart the game..!`;
         }
-        else if(level >3 && level <=6){
+        else if(level >3 && level <=11){
             h3.innerHTML=`Game Over! Level was <b>${level}</b><br>I’ve seen NPCs play better than You!.<br><br>Press Start to Restart the game..!`;
         }
         else{
