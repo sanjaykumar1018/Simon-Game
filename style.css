@@ -1,10 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-body{
-    text-align: center;
-    justify-content: center;
+body {
+    margin: 0;
+    padding: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #2b5876);
+    color: white;
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .navbar{
@@ -75,4 +94,46 @@ button{
 }
 .userflash{
     background-color: rgb(5, 5, 5);
+}
+
+.btns:hover {
+    box-shadow: 0 0 25px white;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+h1, h3 {
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+
+
+.gameflash {
+  box-shadow: 0 0 30px white;
+  filter: brightness(1.4);
+}
+
+
+.start {
+  background: #222;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.start:hover {
+  box-shadow: 0 0 15px #fff, 0 0 30px #0ff;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .btns {
+    width: 140px;
+    height: 120px;
+  }
+  .circle, button {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
 }
