@@ -1,139 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #1e1e2f, #2b5876);
-    color: white;
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.navbar{
-    background-color: pink;
-}
-.dis-red{
-    background: rgb(255, 3, 3);
-}
-.btn-box{
-    display: flex;
-    justify-content: center;
-}
-.circle{
-    height: 100px;
-    width: 100px;
-    margin-top: 160px;
-    border-radius: 50%;
-    background: #000000;
-}
-button{
-    border: none;
-    color:aliceblue;
-    font-size: 20px;
-    background: none;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.btns{
-    margin: 10px;
-    height: 180px;
-    width: 220px;
-    border: 5px solid black;
-}
-
-.btn-red{
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 30% 40%;
-}
-.btn-green{
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 30% 40%;
-}
-.btn-blue{
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 30% 40%;
-}
-.btn-yellow{
-    border-bottom-left-radius:50%;
-    border-top-right-radius:30% 40%;
-
-}
-.red{
-    background-color: #e90b0b;
-}
-.green{
-    background-color: #17e032;
-}
-.yellow{
-    background-color: #daf107;
-}
-.blue{
-    background-color: #0339db;
-}
-.gameflash{
-    background-color: azure;
-}
-.userflash{
-    background-color: rgb(5, 5, 5);
-}
-
-.btns:hover {
-    box-shadow: 0 0 25px white;
-    transform: scale(1.05);
-    transition: 0.3s ease;
-}
-
-h1, h3 {
-    color: white;
-    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-}
-
-
-
-.gameflash {
-  box-shadow: 0 0 30px white;
-  filter: brightness(1.4);
-}
-
-
-.start {
-  background: #222;
-  border: 2px solid #fff;
-  transition: all 0.3s ease;
-}
-
-.start:hover {
-  box-shadow: 0 0 15px #fff, 0 0 30px #0ff;
-  transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-  .btns {
-    width: 140px;
-    height: 120px;
+/* Tablets and below (up to 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
   }
-  .circle, button {
+
+  h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .btns {
+    width: 160px;
+    height: 140px;
+  }
+
+  .circle,
+  .start {
+    width: 90px;
+    height: 90px;
+    font-size: 18px;
+    margin-top: 120px;
+  }
+}
+
+/* Mobile Landscape and Small Tablets (up to 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .btns {
+    width: 130px;
+    height: 110px;
+  }
+
+  .circle,
+  .start {
     width: 80px;
     height: 80px;
     font-size: 16px;
+    margin-top: 100px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line-one,
+  .line-two {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Mobile Portrait (up to 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .btns {
+    width: 100px;
+    height: 90px;
+    margin: 8px;
+  }
+
+  .circle,
+  .start {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+    margin-top: 80px;
+  }
+
+  .btns:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .start:hover {
+    transform: none;
+    box-shadow: 0 0 10px #fff;
   }
 }
